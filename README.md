@@ -6,7 +6,7 @@ The goal of this project is to develop a model that accurately predicts house pr
 * Find the best deals by number of rooms, price, building status.
 * Collected over 2400 apartment listings from a real estate website using Python and Selenium.
 * Optimized RandomForestRegressor, ExtraTreesRegressor and GradientBoostingRegressor using GridsearchCV to achieve the best model.
-* Created client API using flask
+* Created client API using flask.
 
 ### Code and Resources Used
 Python Version: 3.9.13 <br/>
