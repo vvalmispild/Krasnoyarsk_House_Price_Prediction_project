@@ -28,6 +28,7 @@ EDA is a crucial step in understanding the data and extracting meaningful insigh
 * The layout type significantly affects apartment prices, with certain types being more expensive than others.
 * The construction status of buildings varies, and apartments under construction are popular, particularly two-room apartments.
 * The EDA also identified profitable and popular two-room apartments located in specific regions of Krasnoyarsk.
+
 [alt text](https://github.com/vvalmispild/Krasnoyarsk_Real_Estate_project/blob/main/img/Scatter_plot.png)
 
 ### Machine Learning Prediction:
@@ -55,19 +56,11 @@ GradientBoostingRegressor |	6248.75 |	10191.07 |	0.854725 |
 ### Productionization
 The final model (GradientBoostingRegressor) was incorporated into a Flask API.
 We built a Flask API endpoint to serve our model predictions. The API is hosted on a local web server and accepts requests with a list of values representing a flat listing. It returns an estimated price for the real estate based on the input parameters.<br/>
-To use the API, make a POST request to the following endpoint:<br/>
-http://localhost:5000/predict
+To use the API, make a POST request to the following endpoint http://localhost:5000/predict.
 The request payload should include the necessary parameters for a flat listing, and the API will respond with the estimated price.
-
-### Conclusion
-The Krasnoyarsk House Price Prediction project offers a valuable tool for estimating house prices in the Krasnoyarsk city housing market. By leveraging web scraping, data cleaning, exploratory data analysis, and advanced machine learning models, we have developed a reliable solution to provide insights for buyers, sellers, developers, and investors. The Flask API allows for easy integration into various applications, enabling users to obtain estimated prices for real estate listings in Krasnoyarsk.
-
 
 ### References:
 <sup>
 1) https://arevera.ru/apartments/  <br/>
 2) https://medium.com/towards-data-science/how-to-easily-deploy-machine-learning-models-using-flask-b95af8fe34d4 
 </sup>
-
-<!---![alt text](https://github.com/vvalmispild/Krasnoyarsk_Real_Estate_project/blob/main/img/Scatter_plot.png)
-![alt text](https://github.com/vvalmispild/Krasnoyarsk_Real_Estate_project/blob/main/img/Layout.png)-->
