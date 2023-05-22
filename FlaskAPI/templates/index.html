@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Deployment</title>
+  <style>
+    html, body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Helvetica';
+      
+      background: #1f1f1f;
+
+      color: #fff;
+      font-size: 24px;
+      letter-spacing: 1.4px;
+
+    }
+
+    .login {
+      text-align: center;
+      max-width: 400px;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.2);
+      border-radius: 5px;
+    }
+
+    .login h2 {
+      margin-top: 0;
+    }
+
+    .login input[type="text"],
+    .login select {
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .login button[type="submit"] {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="login">
+    <h2>Krasnoyarsk real estate price prediction</h2>
+    <form action="{{ url_for('predict')}}" method="post">
+      <select name="flat_type" required="required">
+        <option value="" disabled selected>Select flat type</option>
+        <option value="1_room_ap">1_room_ap</option>
+        <option value="2_room_ap">2_room_ap</option>
+        <option value="3_room_ap">3_room_ap</option>
+        <option value="4_room_ap">4_room_ap</option>
+        <option value="gostinka_ap">gostinka_ap</option>
+        <option value="sectional_ap">sectional_ap</option>
+        <option value="room">room</option>
+      </select>
+      <br>
+      <select name="city_area" required="required">
+        <option value="" disabled selected>Select city area</option>
+        <option value="Sovietskiy">Sovietskiy</option>
+        <option value="Oktyabrskiy">Oktyabrskiy</option>
+        <option value="Sverdlovsky">Sverdlovsky</option>
+        <option value="Leninsky">Leninsky</option>
+        <option value="Zheleznodorozhniy">Zheleznodorozhniy</option>
+        <option value="Kirovsky">Kirovsky</option>
+        <option value="Central">Central</option>
+      </select>
+      <br>
+      <select name="layout" required="required">
+        <option value="" disabled selected>Select layout</option>
+        <option value="new">new</option>
+        <option value="studio">studio</option>
+        <option value="individual">individual</option>
+        <option value="khrushchevka">khrushchevka</option>
+        <option value="improved">improved</option>
+        <option value="stalinka">stalinka</option>
+        <option value="leningradka">leningradka</option>
+        <option value="gostinka">gostinka</option>
+        <option value="dorm_room">dorm_room</option>
+        <option value="section">section</option>
+      </select>
+      <br>
+      <select name="status" required="required">
+        <option value="" disabled selected>Select status</option>
+        <option value="finished">finished</option>
+        <option value="under_construction">under_construction</option>
+      </select>
+      <br>
+      <input type="text" name="premises_area" placeholder="premises_area" required="required" />
+      <br>
+      <input type="text" name="floor" placeholder="floor" required="required" />
+      <br>
+      <input type="text" name="floor_tot" placeholder="floor_tot" required="required" />
+      <br>
+      <button type="submit" class="btn btn-primary btn-block btn-large">Predict price</button>
+    </form>
+    <br>
+    <br>
+    {{ prediction_text }}
+  </div>
+</body>
+</html>
