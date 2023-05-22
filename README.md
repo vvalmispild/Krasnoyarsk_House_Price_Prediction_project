@@ -56,7 +56,7 @@ GradientBoostingRegressor |	6248.75 |	10191.07 |	0.854725 |
 ### Productionization
 The final model (GradientBoostingRegressor) was incorporated into a Flask API.
 We built a Flask API endpoint to serve our model predictions. The API is hosted on a local web server and accepts requests with a list of values representing a flat listing. It returns an estimated price for the real estate based on the input parameters.<br/>
-To use the API, make a POST request to the following endpoint http://localhost:5000/predict.
+To launch the web application, the command "$ python app.py" is executed, and the resulting GUI can be accessed by opening http://127.0.0.1:5000/ in a web browser.
 The request payload should include the necessary parameters for a flat listing, and the API will respond with the estimated price.
 
 ### References:
