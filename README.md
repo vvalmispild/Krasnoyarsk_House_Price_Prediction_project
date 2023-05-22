@@ -8,7 +8,7 @@ The goal of this project is to develop a model that accurately predicts house pr
 * Optimized RandomForestRegressor, ExtraTreesRegressor and GradientBoostingRegressor using GridsearchCV to achieve the best model.
 * Created client API using flask
 
-### Code and Resources Used:
+### Code and Resources Used
 Python Version: 3.9.13 <br/>
 Packages: pandas, numpy, matplotlib, selenium, seaborn, plotly, sklearn, flask, pickle, tqdm
 
@@ -31,7 +31,7 @@ EDA is a crucial step in understanding the data and extracting meaningful insigh
 
 ![alt text](https://github.com/vvalmispild/Krasnoyarsk_Real_Estate_project/blob/main/img/Scatter_plot.png)
 
-### Machine Learning Prediction:
+### Machine Learning Prediction
 To predict house prices accurately, we experimented with various machine learning models. The following models were trained and evaluated: <br/>
 * Linear Regression 
 * Lasso Regression 
