@@ -28,18 +28,18 @@ EDA is a crucial step in understanding the data and extracting meaningful insigh
 * The layout type significantly affects apartment prices, with certain types being more expensive than others.
 * The construction status of buildings varies, and apartments under construction are popular, particularly two-room apartments.
 * The EDA also identified profitable and popular two-room apartments located in specific regions of Krasnoyarsk.
-
+[alt text](https://github.com/vvalmispild/Krasnoyarsk_Real_Estate_project/blob/main/img/Scatter_plot.png)
 
 ### Machine Learning Prediction:
 To predict house prices accurately, we experimented with various machine learning models. The following models were trained and evaluated: <br/>
-Linear Regression <br/>
-Lasso Regression <br/>
-Ridge Regression <br/>
-Decision Tree <br/>
-Random Forest <br/>
-Extra Trees <br/>
-K-Nearest Neighbors <br/>
-Gradient Boosting
+* Linear Regression 
+* Lasso Regression 
+* Ridge Regression 
+* Decision Tree 
+* Random Forest 
+* Extra Trees 
+* K-Nearest Neighbors 
+* Gradient Boosting
 
 #### Model performance
 The performance of these models was evaluated using metrics such as Mean Absolute Error (MAE), Root Mean Squared Error (RMSE), and R2-score. After careful evaluation, we selected the top three performing models for further consideration: Random Forest, Extra Trees, and Gradient Boosting. Among these, the Gradient Boosting Regressor exhibited the best performance on the test dataset based on the RMSE and R2_score metrics. <br/>
